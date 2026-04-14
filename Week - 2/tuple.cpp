@@ -26,6 +26,8 @@ int main()
     for(auto [x,y,z] : t){
         cout<< x << " " << y << " " << z << endl;
     }
+    
+
 
     return 0;
 }
