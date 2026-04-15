@@ -25,7 +25,6 @@ int main()
 
         int cnt = 0;
         int sum = 0;
-
         for (int i = 0; i < n; i++)
         {
             sum += a[i];
@@ -35,9 +34,8 @@ int main()
                 cnt++;
             }
         }
-        
 
-        cout << cnt<<endl;
+        cout << cnt << endl;
     }
 
     return 0;
