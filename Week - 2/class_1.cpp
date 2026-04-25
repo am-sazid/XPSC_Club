@@ -10,6 +10,7 @@ int main()
     // cout<< student.first << " " << student.second << endl;
 
     student.first = "AM Sazid";
+    student.second = 237759;
 
     auto [name , roll] = student;
     cout<< name << " " << roll;
