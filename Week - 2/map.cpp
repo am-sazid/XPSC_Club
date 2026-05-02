@@ -28,12 +28,25 @@ int main()
     //     cout<< key << " -> " << value<<endl;
     // }
 
-    int x; cin>> x ;
-    auto it = mp.find(x);
-    if(it != mp.end())
-        cout<< it->first << "  " << it->second << endl;
-    else{
-        cout<<"Key Not found";
+    // int x;
+    // cin >> x;
+    // auto it = mp.find(x);
+    // if (it != mp.end())
+    //     cout << it->first << "  " << it->second << endl;
+    // else
+    // {
+    //     cout << "Key Not found";
+    // }
+
+    for (auto it : mp)
+    {
+        int key = it.first, value = it.second;
+
+        cout << key << " -> " << value << endl;
     }
+    cout<<'\n';
+    auto  it = mp.begin();
+    it++;
+    cout<<  it->first << " " << it->second ;
     return 0;
 }
