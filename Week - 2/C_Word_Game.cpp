@@ -26,8 +26,6 @@ int main()
                 freq[v[i][j]]++;
             }
         }
-
-
         
         vector<int> score(3, 0);
 
