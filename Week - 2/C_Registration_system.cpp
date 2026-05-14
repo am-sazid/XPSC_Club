@@ -9,26 +9,25 @@ int main()
     int n;
     cin >> n;
 
-    vector<string> user;
+    string user[n];
 
     for (int i = 0; i < n; i++)
     {
-        string s;
-        cin >> s;
-
-        user.push_back(s);
+        cin>> user[i];
     }
     cout << "OK" << endl;
-
-    for (int i = 1; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
-        for (auto ss : user){
-            if(ss == user[i+1]){
-                cout<<ss<<1<<endl;
+        for (int j = 0; j < i; j++)
+        {
+            if (user[i] == user[j])
+            {
+                cout << user[j] << 1 << endl;
                 break;
             }
-            else{
-                cout<<"OK"<<endl;
+            else
+            {
+                cout << "OK" << endl;
                 break;
             }
         }
