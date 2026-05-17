@@ -28,6 +28,7 @@ int main()
             {
                 st.insert(a[i]);
             }
+            
             else
             {
                 ans = i + 1;
