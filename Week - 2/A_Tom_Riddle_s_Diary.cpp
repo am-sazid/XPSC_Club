@@ -1,26 +1,31 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() 
+int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int t;
-    cin>> t ;
 
-    for (int i = 0; i < t; i++)
+    int n;
+    cin >> n;
+
+    unordered_set<string> seen;
+
+    for (int i = 0; i < n; i++)
     {
         string s;
-        cin>> s;
+        cin >> s;
 
-        cout<< s << endl;
+        if (seen.count(s))
+        {
+            cout << "YES\n";
+        }
+        else
+        {
+            cout << "NO\n";
+            seen.insert(s);
+        }
     }
 
-    // for (int i = 0; i < count; i++)
-    // {
-    //     /* code */
-    // }
-    
-    
     return 0;
 }
