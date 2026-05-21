@@ -1,0 +1,1 @@
+{"name":"Local: upper_bound_in_mset","url":"e:\\Phitron\\XPSC_Club\\Week - 3\\upper_bound_in_mset.cpp","tests":[{"id":1779257311102,"input":"8\n2 4 2 9 6 4 9 9\n8","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Phitron\\XPSC_Club\\Week - 3\\upper_bound_in_mset.cpp","group":"local","local":true}
