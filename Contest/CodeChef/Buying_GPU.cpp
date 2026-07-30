@@ -15,7 +15,7 @@ int main()
         cin >> x >> y >> z;
 
         if (z <= y)
-            cout << -1 << "\n";
+            cout << -1 << "\n"; 
         else
         {
             int diff = z - y;
