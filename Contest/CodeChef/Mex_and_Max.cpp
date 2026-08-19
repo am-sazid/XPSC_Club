@@ -14,9 +14,10 @@ int main()
     cin.tie(nullptr);
 
     pw2[0] = 1;
-
     for (int i = 1; i < MAXN; i++)
-        pw2[i] = pw2[i - 1] * 2 % MOD;
+    {
+        pw2[i] = (pw2[i - 1] * 2) % MOD;
+    }
 
     int t;
     cin >> t;
@@ -36,37 +37,42 @@ int main()
         }
 
         ll ans = 0;
+
         ll pref = 1;
 
-        // mex = 0
         if (cnt[0] == 0)
         {
             ans = (pw2[cnt[1]] - 1 + MOD) % MOD;
         }
 
-        // mex = 1, 2, 3, ...
         for (int x = 1; x <= n; x++)
         {
-            // 0,1,...,x-1 must appear
-            pref = pref * (pw2[cnt[x - 1]] - 1 + MOD) % MOD;
 
-            // x must NOT appear
-            if (cnt[x] != 0)
-                continue;
+            if (cnt[x] > 0)
+                break;
 
-            // max = x - 1
-            ans = (ans + pref) % MOD;
+            if (x == 1)
+            {
+                pref = (pw2[cnt[0]] - 1 + MOD) % MOD;
+            }
+            else
+            {
+                pref = pref * (pw2[cnt[x - 1]] - 1 + MOD) % MOD;
+            }
 
-            // max = x + 1
+            ans += pref;
+            ans %= MOD;
+
             if (x + 1 <= n)
             {
-                ll ways = (pw2[cnt[x + 1]] - 1 + MOD) % MOD;
+                ll chooseMax = (pw2[cnt[x + 1]] - 1 + MOD) % MOD;
 
-                ans = (ans + pref * ways) % MOD;
+                ans += pref * chooseMax % MOD;
+                ans %= MOD;
             }
         }
 
-        cout << ans << '\n';
+        cout << ans % MOD << '\n';
     }
 
     return 0;
